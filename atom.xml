@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eeudn8.coding-pages.com/</id>
     <title>Purp1e</title>
-    <updated>2020-02-09T07:32:35.140Z</updated>
+    <updated>2020-02-09T07:39:10.435Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eeudn8.coding-pages.com/"/>
     <link rel="self" href="https://eeudn8.coding-pages.com/atom.xml"/>
@@ -10,6 +10,261 @@
     <logo>https://eeudn8.coding-pages.com/images/avatar.png</logo>
     <icon>https://eeudn8.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Purp1e</rights>
+    <entry>
+        <title type="html"><![CDATA[Markdown基本语法教程和编辑器选择]]></title>
+        <id>https://eeudn8.coding-pages.com/markdown-ji-ben-yu-fa-jiao-cheng-he-bian-ji-qi-xuan-ze/</id>
+        <link href="https://eeudn8.coding-pages.com/markdown-ji-ben-yu-fa-jiao-cheng-he-bian-ji-qi-xuan-ze/">
+        </link>
+        <updated>2020-02-09T10:35:09.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>初学Markdown，简单总结一下语法和编辑器的选择。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>初学Markdown，简单总结一下语法和编辑器的选择。</p>
+</blockquote>
+<!--more-->
+<h2 id="markdown是什么">Markdown是什么？</h2>
+<p><a href="http://www.markdown.cn/">Markdown</a> 是一种是一种<strong>轻量级</strong>的标记语言，它以纯文本形式编写文档，并最终以HTML格式发布。它易读、易写、易更改，兼容HTML，跨平台，常在Blog中使用，现在很多电子邮件中也使用了Markdown。</p>
+<h2 id="markdown编辑器如何选">Markdown编辑器如何选？</h2>
+<p>这取决于用什么系统，用何种方式编辑，比较推荐能够分屏实时预览的编辑器，“所见即所得”没有代码感，一般会不习惯：</p>
+<p><strong>多平台</strong></p>
+<ul>
+<li>
+<p><a href="https://typora.io/">Typora</a> 简洁强大，不支持分屏实时预览，但可以通过<code>Ctrl+/</code>切换视图，并且在预览模式下<strong>有很多小惊喜</strong>。不论是快捷键还是交互体验都做的非常好，<strong>强力推荐</strong>。不过有个小缺点：在源代码视图中没法打开文件视图窗口。</p>
+</li>
+<li>
+<p><a href="https://atom.io/">Atom </a> 较为美观方便 <s>（除了图标）</s> ，按下Ctrl+Shift+M可以<strong>分屏实时预览</strong>显示效果。Atom可以用于各种代码，交互尚可，可以扩展中文菜单等（竟然可以找到V社起源游戏<code>.cfg</code>文件的高亮扩展包）。<br>
+ <br>
+<strong>Windows</strong></p>
+</li>
+<li>
+<p><a href="http://markdownpad.com/">Markdownpad</a> 笔者同学正在使用的编辑器，支持<strong>分屏实时预览</strong>，交互尚可。<br>
+ <br>
+<strong>Mac</strong></p>
+</li>
+<li>
+<p><a href="http://25.io/mou/">Mou</a> 界面简洁美观，支持<strong>分屏实时预览</strong>。其他的编辑器也不少。<br>
+ <br>
+<strong>Linux</strong></p>
+</li>
+<li>
+<p><a href="https://remarkableapp.github.io">Remarkable</a> 它是一个卓越且功能齐全的 Markdown 编辑器，为用户提供了一些令人激动的特性<br>
+ <br>
+<strong>在线编辑</strong></p>
+</li>
+<li>
+<p><a href="https://dillinger.io/">dillinger</a> 漂亮强大，分屏实时预览，支持md, html, pdf 文件导出。支持dropbox, onedrive, github. 来自国外，可能不够稳定。</p>
+</li>
+</ul>
+<h2 id="markdown基本语法教程">Markdown基本语法教程</h2>
+<h3 id="一-标题">一、标题</h3>
+<ol>
+<li>使用1~6个<code>#</code>，空格分隔。√</li>
+</ol>
+<pre><code># 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题
+</code></pre>
+<ol start="2">
+<li>使用2个以上连续<code>=</code>或<code>-</code></li>
+</ol>
+<pre><code>一级标题
+===
+二级标题
+--
+</code></pre>
+<h3 id="二-段落">二、段落</h3>
+<ul>
+<li>使用1个以上<code>&gt;</code>，可嵌套</li>
+</ul>
+<pre><code>&gt; 区块引用
+&gt;&gt; 嵌套引用
+&gt;&gt;&gt; 三嵌套引用
+&gt;&gt;&gt;&gt; 四嵌套引用
+</code></pre>
+<h3 id="三-分割线">三、分割线</h3>
+<ul>
+<li>3个以上 <code>*</code>、<code>-</code>、<code>_</code> ，可以不连续，建议使用不连续减号<code>-- -</code> ，<strong>避免被识别成标题</strong>。</li>
+</ul>
+<pre><code>---
+- - -
+***
+* * *
+___
+_ _ _
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<hr>
+<h3 id="四-斜体-粗体和删除线">四、斜体、粗体和删除线</h3>
+<ol>
+<li>斜体：使用一对<code>*</code>括起来</li>
+</ol>
+<pre><code>*斜体*
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<p><em>斜体</em></p>
+</blockquote>
+<ol start="2">
+<li>粗体：使用一对<code>**</code>或<code>__</code>括起来</li>
+</ol>
+<pre><code>**粗体**  __粗体__
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<p><strong>粗体</strong>  <strong>粗体</strong></p>
+</blockquote>
+<ol start="3">
+<li>删除线：使用一对<code>~~</code>括起来，注意用空格分隔，否则编辑器中后面的内容无法高亮。</li>
+</ol>
+<pre><code>~~WDNMD~~
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<p><s>WDNMD</s></p>
+</blockquote>
+<h3 id="五-列表">五、列表</h3>
+<ol>
+<li>无序列表：行首或段落首使用<code>+</code>或<code>-</code>，空格分隔。建议使用<code>-</code>。</li>
+</ol>
+<pre><code>+ 第一行
+- 第二行
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<ul>
+<li>第一行</li>
+</ul>
+<ul>
+<li>第二行</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>有序列表：数字+<code>.</code> 空格分隔正文。</li>
+</ol>
+<pre><code>1. Line 1
+2. Line 2
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<ol>
+<li>Line 1</li>
+<li>Line 2</li>
+</ol>
+</blockquote>
+<h3 id="六-代码框">六、代码框</h3>
+<ol>
+<li>小代码块：一对` ``</li>
+</ol>
+<pre><code>`Code`
+</code></pre>
+<ol start="2">
+<li>单行代码框: 4个以上<code>空格</code>或2次以上<code>Tab</code></li>
+</ol>
+<pre><code>        Code
+</code></pre>
+<ol start="3">
+<li>多行代码框：在2)基础上衍生，或使用一对3~个以上<code>``。使用</code>空格`生成的框可能为矩形（非圆角矩形）</li>
+</ol>
+<pre><code>
+```
+
+Code Line 1
+Code Line 2
+
+```
+
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<pre><code>Code Line 1
+Code Line 2
+</code></pre>
+<h3 id="七-链接">七、链接</h3>
+<ul>
+<li>参考代码：</li>
+</ul>
+<pre><code>[GitHub](http://github.com)
+自动生成连接 &lt;http://www.github.com/&gt;
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<p><a href="http://github.com">GitHub</a></p>
+</blockquote>
+<blockquote>
+<p>自动生成连接 <a href="http://www.github.com/">http://www.github.com/</a></p>
+</blockquote>
+<h3 id="八-图片">八、图片</h3>
+<ul>
+<li>参考链接代码，之前加上<code>!</code>。Blog分享图片需要使用一些工具比如图床，Github也可以但是加载较慢，这里分享一个免费的图床 <a href="https://www.hualigs.cn/">链接</a> :</li>
+</ul>
+<pre><code>![GitHub set up](http://zh.mweb.im/asset/img/set-up-git.gif)
+</code></pre>
+<ul>
+<li>
+<p>显示效果：</p>
+<figure data-type="image" tabindex="1"><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up" loading="lazy"></figure>
+</li>
+</ul>
+<h3 id="九-表格">九、表格</h3>
+<ul>
+<li>若干<code>-</code>表示分割线，左侧<code>:</code>表示左对齐，右侧表示右对齐，两侧均有表示居中。行与列用<code>|</code>分隔。参考代码：</li>
+</ul>
+<pre><code>| Header One     | Header Two     |
+| :------------- | :------------- |
+| Item One       | Item Two       |
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Header One</th>
+<th style="text-align:left">Header Two</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Item One</td>
+<td style="text-align:left">Item Two</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="心得">心得</h2>
+<ul>
+<li>
+<p>很多编译器会设置快键键或者关联词，比如在Atom中输入<code>c</code>会弹出<code>code</code>，此时按下<code>Tab</code>或者<code>Enter</code>即可快速得到相应符号。</p>
+</li>
+<li>
+<p>可以收集整理一遍Markdown的语法，过程中就可以熟悉并较为熟练掌握这些语法、符号等。</p>
+</li>
+<li>
+<p>很多格式之间需要多空一行否则会被前者的格式覆盖。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hexo+yilia主题博客搭建配置(二)：设置Github和SSH与部署Hexo]]></title>
         <id>https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo/</id>
