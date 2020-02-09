@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eeudn8.coding-pages.com</id>
     <title>Purp1e</title>
-    <updated>2020-02-09T08:29:33.091Z</updated>
+    <updated>2020-02-09T08:52:03.391Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eeudn8.coding-pages.com"/>
     <link rel="self" href="https://eeudn8.coding-pages.com/atom.xml"/>
@@ -174,7 +174,7 @@ mirv_streams edit raw settings myFfmpegCrf;
 //end
 </code></pre>
 <h1 id="cfg常用指令和语法">CFG常用指令和语法</h1>
-<h2 id="echo指令在控制台显示文字">echo指令：在控制台显示文字。</h2>
+<p>echo指令：在控制台显示文字。</p>
 <pre><code>//&quot;&quot;可省，;可省
 echo Hello World
 echo Hello World;
@@ -186,23 +186,23 @@ echo;
 echo &quot;你好！&quot;
 echo &quot;你好！&quot;;
 </code></pre>
-<h2 id="注释">注释</h2>
+<p>注释</p>
 <pre><code>echo Hail Jo~//这是注释
 &quot;&quot;&quot;这也是注释，不常用
 </code></pre>
-<h2 id="加载执行cfg">加载/执行CFG</h2>
+<p>加载/执行CFG</p>
 <pre><code>exec auto.cfg
 //.cfg可省略
 exec auto
 </code></pre>
-<h2 id="分号可省略">分号可省略</h2>
+<p>分号可省略</p>
 <pre><code>//分号省略不影响，
 sensitivity 1
 bind mouse1 +attack;
 //单行多指令/输入控制台务必用分号分隔
 sensitivity 1;bind mouse1 +attack
 </code></pre>
-<h2 id="控制台显示中文提示的方法">控制台显示中文提示的方法</h2>
+<p>控制台显示中文提示的方法</p>
 <pre><code>//输出中文&quot;&quot;不可省，必须是英文引号
 //CFG使用UTF-8/GB2312编码，否则乱码
 echo &quot;你好！&quot;
