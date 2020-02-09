@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://purp1e.site/</id>
     <title>Purp1e</title>
-    <updated>2020-02-09T08:11:21.001Z</updated>
+    <updated>2020-02-09T08:12:58.362Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://purp1e.site/"/>
     <link rel="self" href="https://purp1e.site/atom.xml"/>
@@ -129,7 +129,7 @@ echo &quot;你好！&quot;;
 //错误写法
 -tickrate128
 </code></pre>
-<h2 id="启动项指令由-开头游戏控制台指令由开头">启动项指令由**-<strong>开头，游戏控制台指令由</strong>+**开头</h2>
+<h2 id="启动项指令由-开头游戏控制台指令由开头">启动项指令由<code>-</code>开头，游戏控制台指令由<code>+</code>开头</h2>
 <pre><code>-w 1920 -h 1080
 +fps_max 300
 +exec auto.cfg
