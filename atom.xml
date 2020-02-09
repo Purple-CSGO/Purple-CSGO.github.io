@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eeudn8.coding-pages.com/</id>
     <title>Purp1e</title>
-    <updated>2020-02-09T07:39:45.659Z</updated>
+    <updated>2020-02-09T07:50:03.639Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eeudn8.coding-pages.com/"/>
     <link rel="self" href="https://eeudn8.coding-pages.com/atom.xml"/>
@@ -11,9 +11,131 @@
     <icon>https://eeudn8.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Purp1e</rights>
     <entry>
+        <title type="html"><![CDATA[CSGO控制台与常用指令]]></title>
+        <id>https://eeudn8.coding-pages.com/csgo-console/</id>
+        <link href="https://eeudn8.coding-pages.com/csgo-console/">
+        </link>
+        <updated>2019-05-22T12:48:38.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>这篇文章我会详细的介绍CSGO控制台、指令系统、设置方面的知识，有点晦涩，希望各位能在阅读的过程中时不时昏睡过去( ͡° ͜ʖ ͡°)。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>这篇文章我会详细的介绍CSGO控制台、指令系统、设置方面的知识，有点晦涩，希望各位能在阅读的过程中时不时昏睡过去( ͡° ͜ʖ ͡°)。</p>
+</blockquote>
+<!--more-->
+<h3 id="控制台">控制台</h3>
+<p>V社(Valve)的Source起源引擎制作的游戏都可以开发者控制台，简称控制台<code>console</code>，使用控制台可以实现很多游戏的设置面板无法提供的功能，比如跳投、切换准星参数、颜色等等特殊功能都是利用了控制台的指令实现的，这也是CS游戏的一大特色了。</p>
+<h3 id="开启控制台">开启控制台</h3>
+<p>在游戏的设置菜单里，<code>游戏设置-游戏-启用开发者控制台</code>选<strong>是</strong>即可启用控制台，之后按下<code>~</code>即可开关控制台并使用各种指令。开启控制台的指令是<code>con_enable 1</code>，看起来是个悖论，等到说CFG时就知道它的用处了。</p>
+<figure data-type="image" tabindex="1"><img src="https://eeudn8.coding-pages.com//post-images/1581234291585.png" alt="开启控制台" loading="lazy"></figure>
+<h3 id="多个控制台指令">多个控制台指令</h3>
+<p>当同时需要在控制台使用多个指令时，务必使用分号<code>;</code>分隔各个指令。</p>
+<h3 id="控制台提示">控制台提示</h3>
+<p>指令输入的过程中控制台会给出提示，大多数情况都会有下拉菜单提示各种指令，可以使用↑↓在下拉菜单中切换，使用Tab键也可以自动填入下拉菜单的第一个指令，比如：</p>
+<ul>
+<li>显示各种网络参数的指令<code>net_graph 1</code>，输入至<code>net_</code>时下方第一条指令就是<code>net_graph</code>，直接按下<code>Tab</code>和<code>1</code>即可快速输入这条完整的指令。</li>
+<li>退出游戏的指令<code>quit</code>，原理同上，输入<code>q</code>→<code>Tab</code>→<code>回车</code>，即可实现光速quit（真实）。</li>
+</ul>
+<p>不要小看提示，他可以很大程度上纠正拼写问题，有时使用指令/CFG的时候可以试着手动输一遍，过程中提示消失很可能是拼写有误；同样，如果使用hlae录制集锦，输入<code>mirv</code>发现没有提示极可能没有正确的使用hlae启动csgo。（不是hale！！）</p>
+<h3 id="常用控制台指令">常用控制台指令</h3>
+<h4 id="账号登录相关">账号登录相关</h4>
+<ul>
+<li>quit 快速退出游戏，使用心态爆炸，光速quit</li>
+<li>exit 同上，不过没有那么有名</li>
+<li>disconnect 退出服务器到主界面</li>
+<li>retry 重连最近一次加入的房间，比如从休闲、死斗退出之后还想回到刚才的房间可以使用，前提是中途没有重开游戏；5e、b5等平台也可以使用快速重连服务器（小退），重启游戏是大退。</li>
+</ul>
+<h4 id="常用指令">常用指令</h4>
+<ul>
+<li>net_graph 1  显示网络参数：ping/var/choke等，0为关闭。</li>
+<li>net_graphpos 1  网络参数的水平位置：1=右  2=中  3=左。</li>
+<li>fps_max 300  设置最大帧数为300，一般会根据当前的帧数表现动态调整，尽可能让FPS波动不超过60以获得较好的观感体验。</li>
+<li>volume 1  主音量大小，0为静音</li>
+<li>sensitivity 0.9  鼠标灵敏度</li>
+<li>map dust2  进入本地离线服务器并加载dust2地图，地图名不必完全一致，如荒漠迷城可以用<code>map mir</code>。</li>
+<li>mat_monitorgamma 2.2  亮度，越小越亮[1.6~2.6]</li>
+<li>mat_monitorgamma_tv_enabled &quot;0&quot;  显示模式[1.电视  0.电脑屏幕]</li>
+<li>buy awp  购买武器指令，即购买awp</li>
+<li>give weapon_ak47  获得ak47，常用于跑图</li>
+<li>+right  视角右移，输入-right取消</li>
+<li>+moveright  相当于按下D键，-moveright取消，和+right组成挂机防踢指令</li>
+</ul>
+<h4 id="cl_相关参数">cl_相关参数</h4>
+<p>cl_开头的指令往往和HUD有关，比如雷达、血条、菜单等用于提示玩家的信息。</p>
+<ul>
+<li>cl_autowepswitch 0  关闭自动换上捡起的武器：珍爱生命，远离自动换枪</li>
+<li>cl_autohelp 0  禁用游戏提示（格洛克/法玛斯连发提示）</li>
+<li>cl_showhelp 0  禁用游戏提示</li>
+<li>cl_dm_buyrandomweapons 0  关闭死斗随机买枪，功能同F3键</li>
+<li>cl_draw_hud 0  关闭HUD，得到相对干净的画面，方便截图或者录制视频</li>
+<li>cl_draw_only_deathnotices 0  关闭大部分HUD，保留准星和击杀信息，常用于录制视频和集锦</li>
+<li>cl_drawhud_force_radar -1  强制关闭雷达，但是雷达下方的金钱数无法关闭，1开启雷达</li>
+</ul>
+<p>HUD颜色透明度、雷达参数省略，直接在设置中调整即可。</p>
+<h4 id="准星参数">准星参数</h4>
+<ul>
+<li>cl_crosshairalpha 255  透明度（0~255）</li>
+<li>cl_crosshairdot 1  准星中间的点，0关闭</li>
+<li>cl_crosshairgap 1  十字准星间距，可以&lt;0</li>
+<li>cl_crosshair_t 0  T型准星，1开启</li>
+<li>cl_crosshairsize 3 准星长度</li>
+<li>cl_crosshairthickness 1 准星厚度</li>
+<li>cl_crosshairstyle 4  准星类型[1.  2.  3.  4.经典静态  5.跑动静止开枪动态]</li>
+<li>cl_crosshair_drawoutline 0 准星黑色外轮廓粗细，0关闭</li>
+<li>cl_crosshaircolor_b &quot;250&quot;</li>
+<li>cl_crosshaircolor_r &quot;0&quot;</li>
+<li>cl_crosshaircolor_g &quot;255&quot;  准星的颜色RGB值</li>
+</ul>
+<p>主要是这些参数，小改动使用控制台方便，更全面的调整请在创意工坊<strong>Crashz crosshair generator</strong>中调整。</p>
+<h4 id="持枪视角参数">持枪视角参数</h4>
+<ul>
+<li>viewmodel_presetpos 2  持枪视角预设[1.默认  2.写实  3.经典]</li>
+<li>viewmodel_recoil 0  取消开枪枪口向上跳动，1开启时跳动幅度很大</li>
+<li>viewmodel_offset_x &quot;1.1&quot;</li>
+<li>viewmodel_offset_y &quot;-1.8&quot;</li>
+<li>viewmodel_offset_z &quot;0.2&quot;  XYZ轴的参数</li>
+<li>viewmodel_fov &quot;54&quot;  视角的FOV（视野大小）</li>
+<li>cl_bobcycle &quot;0.98&quot;  手臂摆动幅度</li>
+</ul>
+<p>主要浏览一下这些参数，可以在创意工坊<strong>Crashz viewmodel generator</strong>中调整。</p>
+<h4 id="sv_相关参数">sv_相关参数</h4>
+<p>sv是server的简写，一般在主机创建房间的时候使用，跑图常用。</p>
+<ul>
+<li>sv_cheats 1  开启作弊模式，有的指令官匹会影响平衡，跑图时记得开启</li>
+<li>sv_infinite_ammo 1  无限子弹 [1.无限子弹  2.无限弹夹数  0.关闭]</li>
+<li>sv_showimpacts  1  显示弹着点，0关闭</li>
+<li>sv_showimpacts_time 15  弹着点时间，单位秒</li>
+<li>sv_grenade_trajectory 1  显示投掷物轨迹，0关闭</li>
+<li>sv_grenade_trajectory_time 15  投掷物轨迹显示时间</li>
+<li>sv_grenade_trajectory_thickness 0.5  轨迹线厚度</li>
+</ul>
+<h4 id="bot相关指令">bot相关指令</h4>
+<ul>
+<li>bot_kick  踢掉BOT</li>
+<li>bot_stop 1  BOT静止</li>
+<li>bot_crouch 1  BOT蹲下</li>
+<li>bot_add  添加BOT</li>
+<li>bot_kill  杀死BOT</li>
+<li>bot_place  放置BOT</li>
+</ul>
+<h4 id="mp_相关指令">mp_相关指令</h4>
+<ul>
+<li>mp_warmup_end  热身结束</li>
+<li>mp_restartgame 1  重新开始游戏</li>
+<li>mp_freezetime 1  回合开始静止1s</li>
+<li>mp_round_restart_delay 2  回合结束后等待时间2s</li>
+<li>god  无敌，gods是所有人无敌</li>
+</ul>
+<p>篇幅限制只挑了较为常用的指令，更多指令可以<a href="https://tools.dathost.net/csgo-commands">登录这个网站</a>，或<a href="https://developer.valvesoftware.com/wiki/Console_Command_List">V社官方指令清单</a>搜索查找。</p>
+<hr>
+<p>下面的文章会讲述进阶指令、启动项和Config|CFG相关内容。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Markdown基本语法教程和编辑器选择]]></title>
-        <id>https://eeudn8.coding-pages.com/markdown-ji-ben-yu-fa-jiao-cheng-he-bian-ji-qi-xuan-ze/</id>
-        <link href="https://eeudn8.coding-pages.com/markdown-ji-ben-yu-fa-jiao-cheng-he-bian-ji-qi-xuan-ze/">
+        <id>https://eeudn8.coding-pages.com/markdown/</id>
+        <link href="https://eeudn8.coding-pages.com/markdown/">
         </link>
         <updated>2019-05-12T03:13:32.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -267,8 +389,8 @@ Code Line 2
     </entry>
     <entry>
         <title type="html"><![CDATA[Hexo+yilia主题博客搭建配置(二)：设置Github和SSH与部署Hexo]]></title>
-        <id>https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo/</id>
-        <link href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo/">
+        <id>https://eeudn8.coding-pages.com/hexo-01/</id>
+        <link href="https://eeudn8.coding-pages.com/hexo-01/">
         </link>
         <updated>2019-05-12T03:05:44.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -346,8 +468,8 @@ hexo d -g	//先生成再部署
     </entry>
     <entry>
         <title type="html"><![CDATA[Hexo+yilia主题博客搭建配置(一)：简单配置Hexo和常用指令介绍]]></title>
-        <id>https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-yi-jian-dan-pei-zhi-hexo-he-chang-yong-zhi-ling-jie-shao/</id>
-        <link href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-yi-jian-dan-pei-zhi-hexo-he-chang-yong-zhi-ling-jie-shao/">
+        <id>https://eeudn8.coding-pages.com/hexo-02/</id>
+        <link href="https://eeudn8.coding-pages.com/hexo-02/">
         </link>
         <updated>2019-05-12T02:53:44.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>

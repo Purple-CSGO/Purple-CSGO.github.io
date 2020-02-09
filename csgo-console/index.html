@@ -1,0 +1,354 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Purp1e</title>
+<meta name="description" content="cuz' o' love" />
+<link rel="shortcut icon" href="https://eeudn8.coding-pages.com//favicon.ico?v=1581234576120">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://eeudn8.coding-pages.com//styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://eeudn8.coding-pages.com/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://eeudn8.coding-pages.com//images/avatar.png?v=1581234576120" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Purp1e</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E6%8E%A7%E5%88%B6%E5%8F%B0">控制台</a></li>
+<li><a href="#%E5%BC%80%E5%90%AF%E6%8E%A7%E5%88%B6%E5%8F%B0">开启控制台</a></li>
+<li><a href="#%E5%A4%9A%E4%B8%AA%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%8C%87%E4%BB%A4">多个控制台指令</a></li>
+<li><a href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%8F%90%E7%A4%BA">控制台提示</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%8C%87%E4%BB%A4">常用控制台指令</a>
+<ul>
+<li><a href="#%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95%E7%9B%B8%E5%85%B3">账号登录相关</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4">常用指令</a></li>
+<li><a href="#cl_%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0">cl_相关参数</a></li>
+<li><a href="#%E5%87%86%E6%98%9F%E5%8F%82%E6%95%B0">准星参数</a></li>
+<li><a href="#%E6%8C%81%E6%9E%AA%E8%A7%86%E8%A7%92%E5%8F%82%E6%95%B0">持枪视角参数</a></li>
+<li><a href="#sv_%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0">sv_相关参数</a></li>
+<li><a href="#bot%E7%9B%B8%E5%85%B3%E6%8C%87%E4%BB%A4">bot相关指令</a></li>
+<li><a href="#mp_%E7%9B%B8%E5%85%B3%E6%8C%87%E4%BB%A4">mp_相关指令</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">In a world without walls, who needs 'Windows' and 'Gates'?</div>
+    <a class="rss" href="https://eeudn8.coding-pages.com//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">CSGO控制台与常用指令</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-05-22 / 6 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://eeudn8.coding-pages.com//post-images/csgo-console.jfif" alt="">
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>这篇文章我会详细的介绍CSGO控制台、指令系统、设置方面的知识，有点晦涩，希望各位能在阅读的过程中时不时昏睡过去( ͡° ͜ʖ ͡°)。</p>
+</blockquote>
+<!--more-->
+<h3 id="控制台">控制台</h3>
+<p>V社(Valve)的Source起源引擎制作的游戏都可以开发者控制台，简称控制台<code>console</code>，使用控制台可以实现很多游戏的设置面板无法提供的功能，比如跳投、切换准星参数、颜色等等特殊功能都是利用了控制台的指令实现的，这也是CS游戏的一大特色了。</p>
+<h3 id="开启控制台">开启控制台</h3>
+<p>在游戏的设置菜单里，<code>游戏设置-游戏-启用开发者控制台</code>选<strong>是</strong>即可启用控制台，之后按下<code>~</code>即可开关控制台并使用各种指令。开启控制台的指令是<code>con_enable 1</code>，看起来是个悖论，等到说CFG时就知道它的用处了。</p>
+<figure data-type="image" tabindex="1"><img src="https://eeudn8.coding-pages.com//post-images/1581234291585.png" alt="开启控制台" loading="lazy"></figure>
+<h3 id="多个控制台指令">多个控制台指令</h3>
+<p>当同时需要在控制台使用多个指令时，务必使用分号<code>;</code>分隔各个指令。</p>
+<h3 id="控制台提示">控制台提示</h3>
+<p>指令输入的过程中控制台会给出提示，大多数情况都会有下拉菜单提示各种指令，可以使用↑↓在下拉菜单中切换，使用Tab键也可以自动填入下拉菜单的第一个指令，比如：</p>
+<ul>
+<li>显示各种网络参数的指令<code>net_graph 1</code>，输入至<code>net_</code>时下方第一条指令就是<code>net_graph</code>，直接按下<code>Tab</code>和<code>1</code>即可快速输入这条完整的指令。</li>
+<li>退出游戏的指令<code>quit</code>，原理同上，输入<code>q</code>→<code>Tab</code>→<code>回车</code>，即可实现光速quit（真实）。</li>
+</ul>
+<p>不要小看提示，他可以很大程度上纠正拼写问题，有时使用指令/CFG的时候可以试着手动输一遍，过程中提示消失很可能是拼写有误；同样，如果使用hlae录制集锦，输入<code>mirv</code>发现没有提示极可能没有正确的使用hlae启动csgo。（不是hale！！）</p>
+<h3 id="常用控制台指令">常用控制台指令</h3>
+<h4 id="账号登录相关">账号登录相关</h4>
+<ul>
+<li>quit 快速退出游戏，使用心态爆炸，光速quit</li>
+<li>exit 同上，不过没有那么有名</li>
+<li>disconnect 退出服务器到主界面</li>
+<li>retry 重连最近一次加入的房间，比如从休闲、死斗退出之后还想回到刚才的房间可以使用，前提是中途没有重开游戏；5e、b5等平台也可以使用快速重连服务器（小退），重启游戏是大退。</li>
+</ul>
+<h4 id="常用指令">常用指令</h4>
+<ul>
+<li>net_graph 1  显示网络参数：ping/var/choke等，0为关闭。</li>
+<li>net_graphpos 1  网络参数的水平位置：1=右  2=中  3=左。</li>
+<li>fps_max 300  设置最大帧数为300，一般会根据当前的帧数表现动态调整，尽可能让FPS波动不超过60以获得较好的观感体验。</li>
+<li>volume 1  主音量大小，0为静音</li>
+<li>sensitivity 0.9  鼠标灵敏度</li>
+<li>map dust2  进入本地离线服务器并加载dust2地图，地图名不必完全一致，如荒漠迷城可以用<code>map mir</code>。</li>
+<li>mat_monitorgamma 2.2  亮度，越小越亮[1.6~2.6]</li>
+<li>mat_monitorgamma_tv_enabled &quot;0&quot;  显示模式[1.电视  0.电脑屏幕]</li>
+<li>buy awp  购买武器指令，即购买awp</li>
+<li>give weapon_ak47  获得ak47，常用于跑图</li>
+<li>+right  视角右移，输入-right取消</li>
+<li>+moveright  相当于按下D键，-moveright取消，和+right组成挂机防踢指令</li>
+</ul>
+<h4 id="cl_相关参数">cl_相关参数</h4>
+<p>cl_开头的指令往往和HUD有关，比如雷达、血条、菜单等用于提示玩家的信息。</p>
+<ul>
+<li>cl_autowepswitch 0  关闭自动换上捡起的武器：珍爱生命，远离自动换枪</li>
+<li>cl_autohelp 0  禁用游戏提示（格洛克/法玛斯连发提示）</li>
+<li>cl_showhelp 0  禁用游戏提示</li>
+<li>cl_dm_buyrandomweapons 0  关闭死斗随机买枪，功能同F3键</li>
+<li>cl_draw_hud 0  关闭HUD，得到相对干净的画面，方便截图或者录制视频</li>
+<li>cl_draw_only_deathnotices 0  关闭大部分HUD，保留准星和击杀信息，常用于录制视频和集锦</li>
+<li>cl_drawhud_force_radar -1  强制关闭雷达，但是雷达下方的金钱数无法关闭，1开启雷达</li>
+</ul>
+<p>HUD颜色透明度、雷达参数省略，直接在设置中调整即可。</p>
+<h4 id="准星参数">准星参数</h4>
+<ul>
+<li>cl_crosshairalpha 255  透明度（0~255）</li>
+<li>cl_crosshairdot 1  准星中间的点，0关闭</li>
+<li>cl_crosshairgap 1  十字准星间距，可以&lt;0</li>
+<li>cl_crosshair_t 0  T型准星，1开启</li>
+<li>cl_crosshairsize 3 准星长度</li>
+<li>cl_crosshairthickness 1 准星厚度</li>
+<li>cl_crosshairstyle 4  准星类型[1.  2.  3.  4.经典静态  5.跑动静止开枪动态]</li>
+<li>cl_crosshair_drawoutline 0 准星黑色外轮廓粗细，0关闭</li>
+<li>cl_crosshaircolor_b &quot;250&quot;</li>
+<li>cl_crosshaircolor_r &quot;0&quot;</li>
+<li>cl_crosshaircolor_g &quot;255&quot;  准星的颜色RGB值</li>
+</ul>
+<p>主要是这些参数，小改动使用控制台方便，更全面的调整请在创意工坊<strong>Crashz crosshair generator</strong>中调整。</p>
+<h4 id="持枪视角参数">持枪视角参数</h4>
+<ul>
+<li>viewmodel_presetpos 2  持枪视角预设[1.默认  2.写实  3.经典]</li>
+<li>viewmodel_recoil 0  取消开枪枪口向上跳动，1开启时跳动幅度很大</li>
+<li>viewmodel_offset_x &quot;1.1&quot;</li>
+<li>viewmodel_offset_y &quot;-1.8&quot;</li>
+<li>viewmodel_offset_z &quot;0.2&quot;  XYZ轴的参数</li>
+<li>viewmodel_fov &quot;54&quot;  视角的FOV（视野大小）</li>
+<li>cl_bobcycle &quot;0.98&quot;  手臂摆动幅度</li>
+</ul>
+<p>主要浏览一下这些参数，可以在创意工坊<strong>Crashz viewmodel generator</strong>中调整。</p>
+<h4 id="sv_相关参数">sv_相关参数</h4>
+<p>sv是server的简写，一般在主机创建房间的时候使用，跑图常用。</p>
+<ul>
+<li>sv_cheats 1  开启作弊模式，有的指令官匹会影响平衡，跑图时记得开启</li>
+<li>sv_infinite_ammo 1  无限子弹 [1.无限子弹  2.无限弹夹数  0.关闭]</li>
+<li>sv_showimpacts  1  显示弹着点，0关闭</li>
+<li>sv_showimpacts_time 15  弹着点时间，单位秒</li>
+<li>sv_grenade_trajectory 1  显示投掷物轨迹，0关闭</li>
+<li>sv_grenade_trajectory_time 15  投掷物轨迹显示时间</li>
+<li>sv_grenade_trajectory_thickness 0.5  轨迹线厚度</li>
+</ul>
+<h4 id="bot相关指令">bot相关指令</h4>
+<ul>
+<li>bot_kick  踢掉BOT</li>
+<li>bot_stop 1  BOT静止</li>
+<li>bot_crouch 1  BOT蹲下</li>
+<li>bot_add  添加BOT</li>
+<li>bot_kill  杀死BOT</li>
+<li>bot_place  放置BOT</li>
+</ul>
+<h4 id="mp_相关指令">mp_相关指令</h4>
+<ul>
+<li>mp_warmup_end  热身结束</li>
+<li>mp_restartgame 1  重新开始游戏</li>
+<li>mp_freezetime 1  回合开始静止1s</li>
+<li>mp_round_restart_delay 2  回合结束后等待时间2s</li>
+<li>god  无敌，gods是所有人无敌</li>
+</ul>
+<p>篇幅限制只挑了较为常用的指令，更多指令可以<a href="https://tools.dathost.net/csgo-commands">登录这个网站</a>，或<a href="https://developer.valvesoftware.com/wiki/Console_Command_List">V社官方指令清单</a>搜索查找。</p>
+<hr>
+<p>下面的文章会讲述进阶指令、启动项和Config|CFG相关内容。</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://eeudn8.coding-pages.com/tag/csgo/">
+            <span class="flex-auto">CSGO</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://eeudn8.coding-pages.com/markdown/">
+                <h3 class="post-title">
+                  Markdown基本语法教程和编辑器选择
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://eeudn8.coding-pages.com//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

@@ -1,0 +1,492 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Purp1e</title>
+<meta name="description" content="cuz' o' love" />
+<link rel="shortcut icon" href="https://eeudn8.coding-pages.com//favicon.ico?v=1581234576120">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://eeudn8.coding-pages.com//styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://eeudn8.coding-pages.com/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://eeudn8.coding-pages.com//images/avatar.png?v=1581234576120" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Purp1e</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#markdown%E6%98%AF%E4%BB%80%E4%B9%88">Markdown是什么？</a></li>
+<li><a href="#markdown%E7%BC%96%E8%BE%91%E5%99%A8%E5%A6%82%E4%BD%95%E9%80%89">Markdown编辑器如何选？</a></li>
+<li><a href="#markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B">Markdown基本语法教程</a>
+<ul>
+<li><a href="#%E4%B8%80-%E6%A0%87%E9%A2%98">一、标题</a></li>
+<li><a href="#%E4%BA%8C-%E6%AE%B5%E8%90%BD">二、段落</a></li>
+<li><a href="#%E4%B8%89-%E5%88%86%E5%89%B2%E7%BA%BF">三、分割线</a></li>
+<li><a href="#%E5%9B%9B-%E6%96%9C%E4%BD%93-%E7%B2%97%E4%BD%93%E5%92%8C%E5%88%A0%E9%99%A4%E7%BA%BF">四、斜体、粗体和删除线</a></li>
+<li><a href="#%E4%BA%94-%E5%88%97%E8%A1%A8">五、列表</a></li>
+<li><a href="#%E5%85%AD-%E4%BB%A3%E7%A0%81%E6%A1%86">六、代码框</a></li>
+<li><a href="#%E4%B8%83-%E9%93%BE%E6%8E%A5">七、链接</a></li>
+<li><a href="#%E5%85%AB-%E5%9B%BE%E7%89%87">八、图片</a></li>
+<li><a href="#%E4%B9%9D-%E8%A1%A8%E6%A0%BC">九、表格</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BF%83%E5%BE%97">心得</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">In a world without walls, who needs 'Windows' and 'Gates'?</div>
+    <a class="rss" href="https://eeudn8.coding-pages.com//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">Markdown基本语法教程和编辑器选择</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-05-12 / 5 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://eeudn8.coding-pages.com//post-images/markdown.jfif" alt="">
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>初学Markdown，简单总结一下语法和编辑器的选择。</p>
+</blockquote>
+<!--more-->
+<h2 id="markdown是什么">Markdown是什么？</h2>
+<p><a href="http://www.markdown.cn/">Markdown</a> 是一种是一种<strong>轻量级</strong>的标记语言，它以纯文本形式编写文档，并最终以HTML格式发布。它易读、易写、易更改，兼容HTML，跨平台，常在Blog中使用，现在很多电子邮件中也使用了Markdown。</p>
+<h2 id="markdown编辑器如何选">Markdown编辑器如何选？</h2>
+<p>这取决于用什么系统，用何种方式编辑，比较推荐能够分屏实时预览的编辑器，“所见即所得”没有代码感，一般会不习惯：</p>
+<p><strong>多平台</strong></p>
+<ul>
+<li>
+<p><a href="https://typora.io/">Typora</a> 简洁强大，不支持分屏实时预览，但可以通过<code>Ctrl+/</code>切换视图，并且在预览模式下<strong>有很多小惊喜</strong>。不论是快捷键还是交互体验都做的非常好，<strong>强力推荐</strong>。不过有个小缺点：在源代码视图中没法打开文件视图窗口。</p>
+</li>
+<li>
+<p><a href="https://atom.io/">Atom </a> 较为美观方便 <s>（除了图标）</s> ，按下Ctrl+Shift+M可以<strong>分屏实时预览</strong>显示效果。Atom可以用于各种代码，交互尚可，可以扩展中文菜单等（竟然可以找到V社起源游戏<code>.cfg</code>文件的高亮扩展包）。<br>
+ <br>
+<strong>Windows</strong></p>
+</li>
+<li>
+<p><a href="http://markdownpad.com/">Markdownpad</a> 笔者同学正在使用的编辑器，支持<strong>分屏实时预览</strong>，交互尚可。<br>
+ <br>
+<strong>Mac</strong></p>
+</li>
+<li>
+<p><a href="http://25.io/mou/">Mou</a> 界面简洁美观，支持<strong>分屏实时预览</strong>。其他的编辑器也不少。<br>
+ <br>
+<strong>Linux</strong></p>
+</li>
+<li>
+<p><a href="https://remarkableapp.github.io">Remarkable</a> 它是一个卓越且功能齐全的 Markdown 编辑器，为用户提供了一些令人激动的特性<br>
+ <br>
+<strong>在线编辑</strong></p>
+</li>
+<li>
+<p><a href="https://dillinger.io/">dillinger</a> 漂亮强大，分屏实时预览，支持md, html, pdf 文件导出。支持dropbox, onedrive, github. 来自国外，可能不够稳定。</p>
+</li>
+</ul>
+<h2 id="markdown基本语法教程">Markdown基本语法教程</h2>
+<h3 id="一-标题">一、标题</h3>
+<ol>
+<li>使用1~6个<code>#</code>，空格分隔。√</li>
+</ol>
+<pre><code># 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题
+</code></pre>
+<ol start="2">
+<li>使用2个以上连续<code>=</code>或<code>-</code></li>
+</ol>
+<pre><code>一级标题
+===
+二级标题
+--
+</code></pre>
+<h3 id="二-段落">二、段落</h3>
+<ul>
+<li>使用1个以上<code>&gt;</code>，可嵌套</li>
+</ul>
+<pre><code>&gt; 区块引用
+&gt;&gt; 嵌套引用
+&gt;&gt;&gt; 三嵌套引用
+&gt;&gt;&gt;&gt; 四嵌套引用
+</code></pre>
+<h3 id="三-分割线">三、分割线</h3>
+<ul>
+<li>3个以上 <code>*</code>、<code>-</code>、<code>_</code> ，可以不连续，建议使用不连续减号<code>-- -</code> ，<strong>避免被识别成标题</strong>。</li>
+</ul>
+<pre><code>---
+- - -
+***
+* * *
+___
+_ _ _
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<hr>
+<h3 id="四-斜体-粗体和删除线">四、斜体、粗体和删除线</h3>
+<ol>
+<li>斜体：使用一对<code>*</code>括起来</li>
+</ol>
+<pre><code>*斜体*
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<p><em>斜体</em></p>
+</blockquote>
+<ol start="2">
+<li>粗体：使用一对<code>**</code>或<code>__</code>括起来</li>
+</ol>
+<pre><code>**粗体**  __粗体__
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<p><strong>粗体</strong>  <strong>粗体</strong></p>
+</blockquote>
+<ol start="3">
+<li>删除线：使用一对<code>~~</code>括起来，注意用空格分隔，否则编辑器中后面的内容无法高亮。</li>
+</ol>
+<pre><code>~~WDNMD~~
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<p><s>WDNMD</s></p>
+</blockquote>
+<h3 id="五-列表">五、列表</h3>
+<ol>
+<li>无序列表：行首或段落首使用<code>+</code>或<code>-</code>，空格分隔。建议使用<code>-</code>。</li>
+</ol>
+<pre><code>+ 第一行
+- 第二行
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<ul>
+<li>第一行</li>
+</ul>
+<ul>
+<li>第二行</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>有序列表：数字+<code>.</code> 空格分隔正文。</li>
+</ol>
+<pre><code>1. Line 1
+2. Line 2
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<ol>
+<li>Line 1</li>
+<li>Line 2</li>
+</ol>
+</blockquote>
+<h3 id="六-代码框">六、代码框</h3>
+<ol>
+<li>小代码块：一对` ``</li>
+</ol>
+<pre><code>`Code`
+</code></pre>
+<ol start="2">
+<li>单行代码框: 4个以上<code>空格</code>或2次以上<code>Tab</code></li>
+</ol>
+<pre><code>        Code
+</code></pre>
+<ol start="3">
+<li>多行代码框：在2)基础上衍生，或使用一对3~个以上<code>``。使用</code>空格`生成的框可能为矩形（非圆角矩形）</li>
+</ol>
+<pre><code>
+```
+
+Code Line 1
+Code Line 2
+
+```
+
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<pre><code>Code Line 1
+Code Line 2
+</code></pre>
+<h3 id="七-链接">七、链接</h3>
+<ul>
+<li>参考代码：</li>
+</ul>
+<pre><code>[GitHub](http://github.com)
+自动生成连接 &lt;http://www.github.com/&gt;
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<blockquote>
+<p><a href="http://github.com">GitHub</a></p>
+</blockquote>
+<blockquote>
+<p>自动生成连接 <a href="http://www.github.com/">http://www.github.com/</a></p>
+</blockquote>
+<h3 id="八-图片">八、图片</h3>
+<ul>
+<li>参考链接代码，之前加上<code>!</code>。Blog分享图片需要使用一些工具比如图床，Github也可以但是加载较慢，这里分享一个免费的图床 <a href="https://www.hualigs.cn/">链接</a> :</li>
+</ul>
+<pre><code>![GitHub set up](http://zh.mweb.im/asset/img/set-up-git.gif)
+</code></pre>
+<ul>
+<li>
+<p>显示效果：</p>
+<figure data-type="image" tabindex="1"><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up" loading="lazy"></figure>
+</li>
+</ul>
+<h3 id="九-表格">九、表格</h3>
+<ul>
+<li>若干<code>-</code>表示分割线，左侧<code>:</code>表示左对齐，右侧表示右对齐，两侧均有表示居中。行与列用<code>|</code>分隔。参考代码：</li>
+</ul>
+<pre><code>| Header One     | Header Two     |
+| :------------- | :------------- |
+| Item One       | Item Two       |
+</code></pre>
+<ul>
+<li>显示效果：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Header One</th>
+<th style="text-align:left">Header Two</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Item One</td>
+<td style="text-align:left">Item Two</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="心得">心得</h2>
+<ul>
+<li>
+<p>很多编译器会设置快键键或者关联词，比如在Atom中输入<code>c</code>会弹出<code>code</code>，此时按下<code>Tab</code>或者<code>Enter</code>即可快速得到相应符号。</p>
+</li>
+<li>
+<p>可以收集整理一遍Markdown的语法，过程中就可以熟悉并较为熟练掌握这些语法、符号等。</p>
+</li>
+<li>
+<p>很多格式之间需要多空一行否则会被前者的格式覆盖。</p>
+</li>
+</ul>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://eeudn8.coding-pages.com/tag/markdown/">
+            <span class="flex-auto">Markdown</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://eeudn8.coding-pages.com/csgo-console/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  CSGO控制台与常用指令
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://eeudn8.coding-pages.com/hexo-01/">
+                <h3 class="post-title">
+                  Hexo+yilia主题博客搭建配置(二)：设置Github和SSH与部署Hexo
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://eeudn8.coding-pages.com//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
