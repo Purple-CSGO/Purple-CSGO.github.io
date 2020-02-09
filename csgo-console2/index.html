@@ -36,9 +36,10 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#hexo%E7%AE%80%E4%BB%8B">Hexo简介</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85hexo%E5%8F%8A%E6%89%80%E9%9C%80%E7%BB%84%E4%BB%B6">安装Hexo及所需组件</a></li>
-<li><a href="#%E7%86%9F%E6%82%89hexo%E5%8F%8A%E6%9C%AC%E5%9C%B0%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2">熟悉Hexo及本地查看博客</a></li>
+<li><a href="#bind%E6%8C%87%E4%BB%A4">bind指令</a></li>
+<li><a href="#unbind%E6%8C%87%E4%BB%A4">unbind指令</a></li>
+<li><a href="#bindtoggle%E5%92%8Ctoggle%E6%8C%87%E4%BB%A4">bindtoggle和toggle指令</a></li>
+<li><a href="#alias%E6%8C%87%E4%BB%A4">alias指令</a></li>
 </ul>
 </li>
 </ul>
@@ -87,91 +88,95 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Hexo+yilia主题博客搭建配置(一)：简单配置Hexo和常用指令介绍</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">CSGO控制台进阶指令</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-05-12 / 3 min read
+          2019-05-23 / 4 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://purp1e.site//post-images/hexo-02.jfif" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://purp1e.site//post-images/csgo-console2.jfif" alt="">
         
         <div class="post-content yue">
           <blockquote>
-<p>花了将近一天半的时间使用同学推荐的Hexo框架搭建了Blog，使用的是yilia主题，下面我会分篇讲述一些细节和我踩过的坑。搭建过程部分参考了b站<a href="https://www.bilibili.com/video/av44544186">Codesheep的视频</a>。</p>
+<p>上次的文章讲解了控制台的用法和基础的常用指令，这次介绍几个进阶的指令及用法，希望能够有效提升诸位的睡眠质量( ͡° ͜ʖ ͡°)。</p>
 </blockquote>
-<!-- more -->
-<h2 id="hexo简介">Hexo简介</h2>
-<p>Hexo是一款基于Node.js的静态博客框架，依赖少，易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上。有不少人使用Hexo框架，其主题和解决问题的方案也更多，在遇坑时可以参照前人的解决方法。</p>
-<p>笔者使用了<em>Codesheep</em>推荐的yilia主题，简洁美观，适配各种尺寸比例的终端并且集成了很多组件。在yilia的基础上使用了Gitalk评论系统，添加了归档，修改代码高亮出的背景色等等。<strong>所有的操作均在Windows环境下进行</strong>。</p>
-<h2 id="安装hexo及所需组件">安装Hexo及所需组件</h2>
-<ul>
-<li>
-<p>下载安装<a href="https://gitforwindows.org/">Git</a>。安装后得到Git Bash的命令行工具。可以在命令行中输入<code>git --version</code>来查看版本，检验是否成功安装。</p>
-</li>
-<li>
-<p>下载安装<a href="https://nodejs.org/en/download/">nodejs</a>。下载LTS版本即可。可在命令行中输入</p>
-</li>
-</ul>
-<pre><code>node -v
-npm -v
+<!--more-->
+<h2 id="bind指令">bind指令</h2>
+<pre><code>bind x &quot;...&quot;;
 </code></pre>
-<p>来查看版本，检验是否成功安装。</p>
-<ul>
-<li>安装Hexo组件。在Git Bash中输入：</li>
-</ul>
-<pre><code>npm install -g hexo-cli
+<p>该指令的格式如上，x为绑定的按键名，<code>...</code>是绑定的指令，可以是一条也可以是多条指令用分号<code>;</code>分开，填入引号<code>&quot; &quot;</code>，当指令是没有间隔的单独指令时引号<code>;可以省略，其他情况不可省，如</code>+speed<code>可省略，</code>sensitivity 1`和多个指令不省略。多个指令例子如下：</p>
+<pre><code>bind shift &quot;+speed;r_cleardecals&quot;;
 </code></pre>
-<p>记得使用<code>hexo -v</code>检验是否成功安装。</p>
-<ul>
-<li>确定博客安装位置，比如<code>E:/myblog</code>，则在Git Bash中输入：</li>
-</ul>
-<pre><code>cd e:/myblog
+<p><code>+speed</code>是静步的指令，<code>r_cleardecals</code>是清楚血迹的指令，绑定了shift键。这条指令执行之后，在按下shift键静步的同时清除血迹。</p>
+<p>bind指令还有一种用法，用来查看某个按键已经绑定的指令：</p>
+<pre><code>bind x
 </code></pre>
-<p>切换到选定的位置。然后初始化Hexo，输入：</p>
-<pre><code>npm install
+<p>输入之后控制台会显示已经绑定的指令，可以检查有没有正确的绑定按键。</p>
+<h2 id="unbind指令">unbind指令</h2>
+<p>清除已绑定的键位，比如已经绑定了x键，想要取消：</p>
+<pre><code>unbind x
 </code></pre>
-<h2 id="熟悉hexo及本地查看博客">熟悉Hexo及本地查看博客</h2>
-<p>至此Hexo已经在<code>E:/myblog</code>位置下安装完成，在部署到网络之前先<strong>熟悉一下Hexo的常用指令，在本地服务器查看Hexo页面</strong>。</p>
-<ul>
-<li>处理源文件，<strong>生成</strong>（generate）的文件放在如<code>E:/myblog/public</code>，该位置下的文件最终显示在网页中。</li>
-</ul>
-<pre><code>hexo generate //简写： hexo g
+<pre><code>unbindall	//取消所有按键绑定
 </code></pre>
-<ul>
-<li><strong>打开本地服务器，快速测试hexo</strong>。开启后在浏览器中输入<code>localhost:4000</code>查看网页。在命令行中按下<code>Ctrl+C</code>关闭本地服务器。</li>
-</ul>
-<pre><code>hexo server //简写：hexo s
+<pre><code>unbindallmousekeyboard//取消所有键鼠的绑定
 </code></pre>
-<ul>
-<li><strong>清理</strong><code>public</code>目录下的文件。有的修改只通过<code>hexo g</code>无法完全修改这些文件，会出现bug。清理之后再<code>hexo g</code>和<code>hexo d</code>即可。</li>
-</ul>
-<pre><code>hexo clean //简写：hexo cl
+<p><a href="https://tools.dathost.net/csgo-commands">CSGO指令搜索</a></p>
+<p><a href="https://developer.valvesoftware.com/wiki/Console_Command_List">V社官方指令清单</a></p>
+<p><a href="https://github.com/Purple-CSGO/Cfg-Preset-By-Purp1e/blob/master/bind_default.cfg">默认键位的指令</a></p>
+<h2 id="bindtoggle和toggle指令">bindtoggle和toggle指令</h2>
+<p>有的指令比如<code>cl_drawhud 1</code>即打开HUD，修改数字得到<code>cl_drawhud 0</code>，即关闭HUD。实际这种指令往往在两个不同的值之间切换，那么使用bindtoggle和toggle就可以写出非常简单的一键切换的指令：</p>
+<pre><code>bindtoggle x cl_drawhud;
 </code></pre>
-<ul>
-<li><strong>部署</strong>。把文件deploy到服务器上。暂时还不用输入这条指令，等到下篇文章会具体说明。</li>
-</ul>
-<pre><code>hexo deploy //简写：hexo d
+<pre><code>bind x &quot;toggle cl_drawhud&quot;;
 </code></pre>
+<p>这两种写法都可以实现x键切换HUD开关。</p>
+<p>但是后者<code>toggle</code>的应用更广，可以触发切换更多的指令，比如：</p>
+<pre><code>bind x &quot;toggle volume&quot;;
+</code></pre>
+<p>可以写成：</p>
+<pre><code>bind x &quot;toggle volume 0 1&quot;;
+</code></pre>
+<p>但是实际上音量不仅有0、1两种情况，可以是0/1之间的小数，同样有的指令的值可以大于1，这时候用第二种写法就可以任意地切换。</p>
+<pre><code>bind x &quot;toggle volume 1 0.5&quot;;	//一键切换音量100%/50%
+</code></pre>
+<h2 id="alias指令">alias指令</h2>
+<p>bind指令可以给某个键绑定指令，而alias指令则可以自定义指令。有了alias之后，可以实现CSGO中很多特殊的功能，有兴趣可以了解一下<a href="https://purple-csgo.github.io/hlae/hlae-focus.html">一键高亮击杀</a>的指令解释。</p>
+<pre><code>alias func &quot;...;...&quot;;
+</code></pre>
+<p>执行这条指令之后，在<strong>关闭CSGO游戏之前</strong>，使用<code>func</code>指令就相当于执行&quot;&quot;中所有的指令，可以直接在控制台中使用：</p>
+<pre><code>func
+</code></pre>
+<p>也可以绑定到某个按键上，按键触发：</p>
+<pre><code>bind x func;
+</code></pre>
+<p>一定注意alias指令是临时生效的，重启游戏就要重新输入，解决办法是写成CFG并启用自动加载。</p>
 <hr>
-<p>今后会经常输入这些指令，可以使用简写和组合。如：</p>
-<pre><code>hexo cl &amp; hexo g &amp; hexo s
+<p>alias指令强大之处在于，它可以嵌套定义：</p>
+<pre><code>alias f f_on;
+alias f_on &quot;alias f f_off;...&quot;;
+alias f_off &quot;alias f f_on;...&quot;;
+bind x f;
 </code></pre>
-<p>可以快速清理、生成并开启本地服务器，不过偶尔顺序会变成先<code>generate</code>再<code>clean</code>，需要注意一下。</p>
-<p>一般重复部署到远端服务器时可以这样：</p>
-<pre><code>hexo d -g
+<p>这样就实现一个开关式的功能：</p>
+<ul>
+<li>一开始，按键<strong>x</strong>代表执行<code>f</code>，即<code>f_on</code>。</li>
+<li>按下按键<strong>x</strong>，实际执行<code>f_on</code>，由于也执行了<code>alias f f_of;</code>，之后执行<code>f</code>相当于执行<code>f_off</code></li>
+<li>再按下按键<strong>x</strong>，实际执行<code>f_off</code>，由于也执行了<code>alias f f_on;</code>，之后执行<code>f</code>相当于执行<code>f_on</code></li>
+<li>往复在两个档位间切换</li>
+</ul>
+<p><code>...</code>处可以放入各种指令，已经可以实现很多的功能了，下面给出跳投的指令：</p>
+<pre><code>bind Capslock +jumpthrow;	// &quot;Capslock&quot;键跳投 可修改
+alias +jumpthrow &quot;+jump;-attack&quot;;
+alias -jumpthrow -jump;
 </code></pre>
-<p>可以先生成再部署，后期需要<code>clean</code>的情况比较少，基本不会出问题。</p>
-<p>使用命令行时可以按↑快速切换到历史指令</p>
-<p>每次打开Git Bash都要cd到blog安装位置很麻烦，找到其快捷方式，<code>右键-属性-起始位置</code>改成blog的路径，每次打开就可以直接操作啦~</p>
+<p>如果理解了刚才说的内容，这段指令应该可以理解，这里补充的是：<code>+指令</code>、<code>-指令</code>代表按下/松开按键时触发，按下Capslock键执行<code>+jump;-attack</code>，也就是跳投，松开Capslock键执行<code>-jump</code>，防止不停地跳。</p>
+<hr>
+<p>下一篇文章介绍Config和相关指令，敬请期待~</p>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://purp1e.site/tag/hexo/">
-            <span class="flex-auto">Hexo</span>
-          </a>
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://purp1e.site/tag/blog/">
-            <span class="flex-auto">博客</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://purp1e.site/tag/csgo/">
+            <span class="flex-auto">CSGO</span>
           </a>
         
 
@@ -179,15 +184,24 @@ npm -v
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="https://purp1e.site/hexo-01/">
+              <a href="https://purp1e.site/csgo-config/">
                 <h3 class="post-title">
                   <i class="ri-arrow-left-line"></i>
-                  Hexo+yilia主题博客搭建配置(二)：设置Github和SSH与部署Hexo
+                  Config|CFG设置详细解读和启动项推荐
                 </h3>
               </a>
             </div>
           
 
+          
+            <div class="next-post">
+              <a href="https://purp1e.site/csgo-console/">
+                <h3 class="post-title">
+                  CSGO控制台与常用指令
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
