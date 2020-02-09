@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <div class="main px-4 flex flex-col lg:flex-row">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -106,25 +106,11 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="latest-article text-lg text-gray-700 mb-8">
-          <i class="ri-article-line"></i>
-          最新文章
+        <h2 class="text-lg text-gray-700 mb-8">
+          <i class="ri-bookmark-line"></i> Qt
         </h2>
         
   <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://eeudn8.coding-pages.com/ce-shi/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">测试</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-02-07 / 1 min read</div>
-    </div>
-  </section>
-
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
     
     <div class="content">
       <a href="https://eeudn8.coding-pages.com/biao-ti/">
@@ -137,16 +123,11 @@
     </div>
   </section>
 
-        <div class="read-more">
-          
-        </div>
-        <div class="index-page">
-          <div class="pagination-container animated fadeIn">
+        <div class="pagination-container animated fadeIn">
   
   
 </div>
 
-        </div>
       </div>
     </div>
 
