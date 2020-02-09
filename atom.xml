@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eeudn8.coding-pages.com/</id>
     <title>Purp1e</title>
-    <updated>2020-02-09T07:31:27.486Z</updated>
+    <updated>2020-02-09T07:32:35.140Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eeudn8.coding-pages.com/"/>
     <link rel="self" href="https://eeudn8.coding-pages.com/atom.xml"/>
@@ -19,15 +19,13 @@
         <summary type="html"><![CDATA[<blockquote>
 <p>上篇讲述了Hexo的配置方法和一些常用指令，这篇继续说明如何把Hexo部署到网络上，设置Github和SSH秘钥。</p>
 </blockquote>
-<h2 id="设置github">设置Github</h2>
-<p>目前使用<code>hexo cl</code>、<code>hexo g</code>、<code>hexo s</code>这三条已经可以在本地测试、查看基础的hexo博客了，下面要做的是把博客部署到远端，这里使用免费的Github，如果有需要也可以自行购买域名。</p>
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>上篇讲述了Hexo的配置方法和一些常用指令，这篇继续说明如何把Hexo部署到网络上，设置Github和SSH秘钥。</p>
 </blockquote>
+<!--more-->
 <h2 id="设置github">设置Github</h2>
 <p>目前使用<code>hexo cl</code>、<code>hexo g</code>、<code>hexo s</code>这三条已经可以在本地测试、查看基础的hexo博客了，下面要做的是把博客部署到远端，这里使用免费的Github，如果有需要也可以自行购买域名。</p>
-<!--more-->
 <p>打开<a href="https://github.com/">Github</a>，没有账户的赶紧注册一个吧。</p>
 <p>接下来新建一个项目，即点击<code>Start a project</code>，或在某处点击<code>New repository</code>创建仓库。</p>
 <p>起名时一定要注意，否则后期会出问题，格式为<code>用户名.github.io</code>，以<code>Purple</code>为例，则填入</p>
@@ -100,15 +98,13 @@ hexo d -g	//先生成再部署
         <summary type="html"><![CDATA[<blockquote>
 <p>花了将近一天半的时间使用同学推荐的Hexo框架搭建了Blog，使用的是yilia主题，下面我会分篇讲述一些细节和我踩过的坑。搭建过程部分参考了b站<a href="https://www.bilibili.com/video/av44544186">Codesheep的视频</a>。</p>
 </blockquote>
-<h2 id="hexo简介">Hexo简介</h2>
-<p>Hexo是一款基于Node.js的静态博客框架，依赖少，易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上。有不少人使用Hexo框架，其主题和解决问题的方案也更多，在遇坑时可以参照前人的解决方法。</p>
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>花了将近一天半的时间使用同学推荐的Hexo框架搭建了Blog，使用的是yilia主题，下面我会分篇讲述一些细节和我踩过的坑。搭建过程部分参考了b站<a href="https://www.bilibili.com/video/av44544186">Codesheep的视频</a>。</p>
 </blockquote>
+<!-- more -->
 <h2 id="hexo简介">Hexo简介</h2>
 <p>Hexo是一款基于Node.js的静态博客框架，依赖少，易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上。有不少人使用Hexo框架，其主题和解决问题的方案也更多，在遇坑时可以参照前人的解决方法。</p>
-<!-- more -->
 <p>笔者使用了<em>Codesheep</em>推荐的yilia主题，简洁美观，适配各种尺寸比例的终端并且集成了很多组件。在yilia的基础上使用了Gitalk评论系统，添加了归档，修改代码高亮出的背景色等等。<strong>所有的操作均在Windows环境下进行</strong>。</p>
 <h2 id="安装hexo及所需组件">安装Hexo及所需组件</h2>
 <ul>
