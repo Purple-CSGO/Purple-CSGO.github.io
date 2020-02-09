@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://purp1e.site/</id>
     <title>Purp1e</title>
-    <updated>2020-02-09T08:10:25.212Z</updated>
+    <updated>2020-02-09T08:11:21.001Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://purp1e.site/"/>
     <link rel="self" href="https://purp1e.site/atom.xml"/>
@@ -119,24 +119,24 @@ echo &quot;你好！&quot;;
 <hr>
 <h1 id="设置启动项">设置启动项</h1>
 <p>打开steam的库：<code>库→ConterStrike:Global Offensive→右键→属性→设置启动选项...</code></p>
-<h3 id="启动项之间用空格分隔">启动项之间用空格分隔</h3>
+<h2 id="启动项之间用空格分隔">启动项之间用空格分隔</h2>
 <pre><code>-worldwide -novid -nojoy -d3d9ex +exec auto.cfg
 //错误写法
 -worldwide-novid-nojoy
 </code></pre>
-<h3 id="启动项指令和参数之间用空格分隔">启动项指令和参数之间用空格分隔</h3>
+<h2 id="启动项指令和参数之间用空格分隔">启动项指令和参数之间用空格分隔</h2>
 <pre><code>-tickrate 128
 //错误写法
 -tickrate128
 </code></pre>
-<h3 id="启动项指令由-开头游戏控制台指令由开头">启动项指令由**-<strong>开头，游戏控制台指令由</strong>+**开头</h3>
+<h2 id="启动项指令由-开头游戏控制台指令由开头">启动项指令由**-<strong>开头，游戏控制台指令由</strong>+**开头</h2>
 <pre><code>-w 1920 -h 1080
 +fps_max 300
 +exec auto.cfg
 //无效写法
 -exec auto.cfg
 </code></pre>
-<h3 id="常见启动项">常见启动项</h3>
+<h2 id="常见启动项">常见启动项</h2>
 <pre><code>-novid  关闭过场动画
 -high  提高CSGO程序优先级，有可能负优化
 -nojoy 关闭手柄相关，降低内存占用
@@ -148,7 +148,7 @@ echo &quot;你好！&quot;;
 +exec auto.cfg  自动加载auto.cfg
 +fps_max 300  限制fps最大300
 </code></pre>
-<h3 id="推荐启动项">推荐启动项</h3>
+<h2 id="推荐启动项">推荐启动项</h2>
 <pre><code>-novid -nojoy -high -d3d9ex -tickrate 128 +exec auto.cfg
 </code></pre>
 ]]></content>
