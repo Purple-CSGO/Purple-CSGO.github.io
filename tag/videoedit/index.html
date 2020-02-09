@@ -30,19 +30,42 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
+            cuz' o' love
           </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#hexo%E7%AE%80%E4%BB%8B">Hexo简介</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85hexo%E5%8F%8A%E6%89%80%E9%9C%80%E7%BB%84%E4%BB%B6">安装Hexo及所需组件</a></li>
-<li><a href="#%E7%86%9F%E6%82%89hexo%E5%8F%8A%E6%9C%AC%E5%9C%B0%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2">熟悉Hexo及本地查看博客</a></li>
-</ul>
-</li>
-</ul>
-
+          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+            
+              
+                <a href="https://github.com/Purple-CSGO" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-github-line"></i>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                <a href="https://space.bilibili.com/73115492" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-behance-line"></i>
+                </a>
+              
+            
+              
+                <a href="tencent://message/?uin=438518244&amp;Site=&amp;Menu=yes" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="ri-qq-line"></i>
+                </a>
+              
+            
           </div>
         </div>
       
@@ -92,112 +115,36 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Hexo+yilia主题博客搭建配置(一)：简单配置Hexo和常用指令介绍</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2019-05-12 / 3 min read
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="text-lg text-gray-700 mb-8">
+          <i class="ri-bookmark-line"></i> 视频创作
+        </h2>
+        
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+      <a href="https://eeudn8.coding-pages.com/hlae-ffmpeg/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
+        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://eeudn8.coding-pages.com/post-images/hlae-ffmpeg.png'">
         </div>
-        
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://eeudn8.coding-pages.com/post-images/hexo-02.jfif" alt="">
-        
-        <div class="post-content yue">
-          <blockquote>
-<p>花了将近一天半的时间使用同学推荐的Hexo框架搭建了Blog，使用的是yilia主题，下面我会分篇讲述一些细节和我踩过的坑。搭建过程部分参考了b站<a href="https://www.bilibili.com/video/av44544186">Codesheep的视频</a>。</p>
+      </a>
+    
+    <div class="content">
+      <a href="https://eeudn8.coding-pages.com/hlae-ffmpeg/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">HLAE搭配FFMPEG录制教程</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <blockquote>
+<p>2019/5/23 HLAE更新支持了FFMPEG，官方给出的说明并不是很详细，这里会详细地介绍如何为HLAE安装FFMPEG和录制视频，尤其在录制高帧素材时可以省去很多空间。</p>
 </blockquote>
-<!-- more -->
-<h2 id="hexo简介">Hexo简介</h2>
-<p>Hexo是一款基于Node.js的静态博客框架，依赖少，易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上。有不少人使用Hexo框架，其主题和解决问题的方案也更多，在遇坑时可以参照前人的解决方法。</p>
-<p>笔者使用了<em>Codesheep</em>推荐的yilia主题，简洁美观，适配各种尺寸比例的终端并且集成了很多组件。在yilia的基础上使用了Gitalk评论系统，添加了归档，修改代码高亮出的背景色等等。<strong>所有的操作均在Windows环境下进行</strong>。</p>
-<h2 id="安装hexo及所需组件">安装Hexo及所需组件</h2>
-<ul>
-<li>
-<p>下载安装<a href="https://gitforwindows.org/">Git</a>。安装后得到Git Bash的命令行工具。可以在命令行中输入<code>git --version</code>来查看版本，检验是否成功安装。</p>
-</li>
-<li>
-<p>下载安装<a href="https://nodejs.org/en/download/">nodejs</a>。下载LTS版本即可。可在命令行中输入</p>
-</li>
-</ul>
-<pre><code>node -v
-npm -v
-</code></pre>
-<p>来查看版本，检验是否成功安装。</p>
-<ul>
-<li>安装Hexo组件。在Git Bash中输入：</li>
-</ul>
-<pre><code>npm install -g hexo-cli
-</code></pre>
-<p>记得使用<code>hexo -v</code>检验是否成功安装。</p>
-<ul>
-<li>确定博客安装位置，比如<code>E:/myblog</code>，则在Git Bash中输入：</li>
-</ul>
-<pre><code>cd e:/myblog
-</code></pre>
-<p>切换到选定的位置。然后初始化Hexo，输入：</p>
-<pre><code>npm install
-</code></pre>
-<h2 id="熟悉hexo及本地查看博客">熟悉Hexo及本地查看博客</h2>
-<p>至此Hexo已经在<code>E:/myblog</code>位置下安装完成，在部署到网络之前先<strong>熟悉一下Hexo的常用指令，在本地服务器查看Hexo页面</strong>。</p>
-<ul>
-<li>处理源文件，<strong>生成</strong>（generate）的文件放在如<code>E:/myblog/public</code>，该位置下的文件最终显示在网页中。</li>
-</ul>
-<pre><code>hexo generate //简写： hexo g
-</code></pre>
-<ul>
-<li><strong>打开本地服务器，快速测试hexo</strong>。开启后在浏览器中输入<code>localhost:4000</code>查看网页。在命令行中按下<code>Ctrl+C</code>关闭本地服务器。</li>
-</ul>
-<pre><code>hexo server //简写：hexo s
-</code></pre>
-<ul>
-<li><strong>清理</strong><code>public</code>目录下的文件。有的修改只通过<code>hexo g</code>无法完全修改这些文件，会出现bug。清理之后再<code>hexo g</code>和<code>hexo d</code>即可。</li>
-</ul>
-<pre><code>hexo clean //简写：hexo cl
-</code></pre>
-<ul>
-<li><strong>部署</strong>。把文件deploy到服务器上。暂时还不用输入这条指令，等到下篇文章会具体说明。</li>
-</ul>
-<pre><code>hexo deploy //简写：hexo d
-</code></pre>
-<hr>
-<p>今后会经常输入这些指令，可以使用简写和组合。如：</p>
-<pre><code>hexo cl &amp; hexo g &amp; hexo s
-</code></pre>
-<p>可以快速清理、生成并开启本地服务器，不过偶尔顺序会变成先<code>generate</code>再<code>clean</code>，需要注意一下。</p>
-<p>一般重复部署到远端服务器时可以这样：</p>
-<pre><code>hexo d -g
-</code></pre>
-<p>可以先生成再部署，后期需要<code>clean</code>的情况比较少，基本不会出问题。</p>
-<p>使用命令行时可以按↑快速切换到历史指令</p>
-<p>每次打开Git Bash都要cd到blog安装位置很麻烦，找到其快捷方式，<code>右键-属性-起始位置</code>改成blog的路径，每次打开就可以直接操作啦~</p>
 
-        </div>
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-06-11 / 5 min read</div>
+    </div>
+  </section>
 
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://eeudn8.coding-pages.com/tag/hexo/">
-            <span class="flex-auto">Hexo</span>
-          </a>
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://eeudn8.coding-pages.com/tag/blog/">
-            <span class="flex-auto">博客</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://eeudn8.coding-pages.com/hexo-01/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  Hexo+yilia主题博客搭建配置(二)：设置Github和SSH与部署Hexo
-                </h3>
-              </a>
-            </div>
-          
-
-          
-        </div>
-
-        
+        <div class="pagination-container animated fadeIn">
+  
+  
+</div>
 
       </div>
     </div>
