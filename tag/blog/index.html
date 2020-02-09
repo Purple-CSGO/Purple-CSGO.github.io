@@ -107,45 +107,60 @@
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
         <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-archive-line"></i> 文章归档
+          <i class="ri-bookmark-line"></i> 博客
         </h2>
         
-
-        <div class="archives-container">
-          
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="ri-map-pin-time-line"></i>
-              2019
-            </h2>
-            
-              
-                <a href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Hexo+yilia主题博客搭建配置(二)：设置Github和SSH与部署Hexo
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-05-12</div>
-              
-            
-              
-                <a href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-yi-jian-dan-pei-zhi-hexo-he-chang-yong-zhi-ling-jie-shao/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Hexo+yilia主题博客搭建配置(一)：简单配置Hexo和常用指令介绍
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-05-12</div>
-              
-            
-          
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+      <a href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
+        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://eeudn8.coding-pages.com//post-images/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo.jfif'">
         </div>
+      </a>
+    
+    <div class="content">
+      <a href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Hexo+yilia主题博客搭建配置(二)：设置Github和SSH与部署Hexo</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <blockquote>
+<p>上篇讲述了Hexo的配置方法和一些常用指令，这篇继续说明如何把Hexo部署到网络上，设置Github和SSH秘钥。</p>
+</blockquote>
+<h2 id="设置github">设置Github</h2>
+<p>目前使用<code>hexo cl</code>、<code>hexo g</code>、<code>hexo s</code>这三条已经可以在本地测试、查看基础的hexo博客了，下面要做的是把博客部署到远端，这里使用免费的Github，如果有需要也可以自行购买域名。</p>
 
-        <div>
-          <div class="pagination-container animated fadeIn">
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-05-12 / 4 min read</div>
+    </div>
+  </section>
+
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
+    
+      <a href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-yi-jian-dan-pei-zhi-hexo-he-chang-yong-zhi-ling-jie-shao/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
+        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://eeudn8.coding-pages.com//post-images/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-yi-jian-dan-pei-zhi-hexo-he-chang-yong-zhi-ling-jie-shao.jfif'">
+        </div>
+      </a>
+    
+    <div class="content">
+      <a href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-yi-jian-dan-pei-zhi-hexo-he-chang-yong-zhi-ling-jie-shao/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Hexo+yilia主题博客搭建配置(一)：简单配置Hexo和常用指令介绍</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <blockquote>
+<p>花了将近一天半的时间使用同学推荐的Hexo框架搭建了Blog，使用的是yilia主题，下面我会分篇讲述一些细节和我踩过的坑。搭建过程部分参考了b站<a href="https://www.bilibili.com/video/av44544186">Codesheep的视频</a>。</p>
+</blockquote>
+<h2 id="hexo简介">Hexo简介</h2>
+<p>Hexo是一款基于Node.js的静态博客框架，依赖少，易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上。有不少人使用Hexo框架，其主题和解决问题的方案也更多，在遇坑时可以参照前人的解决方法。</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-05-12 / 3 min read</div>
+    </div>
+  </section>
+
+        <div class="pagination-container animated fadeIn">
   
   
 </div>
 
-        </div>
       </div>
     </div>
 

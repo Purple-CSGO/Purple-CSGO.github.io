@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eeudn8.coding-pages.com/</id>
     <title>Purp1e</title>
-    <updated>2020-02-09T06:59:37.874Z</updated>
+    <updated>2020-02-09T07:31:27.486Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eeudn8.coding-pages.com/"/>
     <link rel="self" href="https://eeudn8.coding-pages.com/atom.xml"/>
@@ -11,23 +11,165 @@
     <icon>https://eeudn8.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Purp1e</rights>
     <entry>
-        <title type="html"><![CDATA[测试]]></title>
-        <id>https://eeudn8.coding-pages.com/ce-shi/</id>
-        <link href="https://eeudn8.coding-pages.com/ce-shi/">
+        <title type="html"><![CDATA[Hexo+yilia主题博客搭建配置(二)：设置Github和SSH与部署Hexo]]></title>
+        <id>https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo/</id>
+        <link href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-er-she-zhi-github-he-ssh-yu-bu-shu-hexo/">
         </link>
-        <updated>2020-02-07T04:17:49.000Z</updated>
-        <content type="html"><![CDATA[<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>≰</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a \nleq b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.09657em;vertical-align:-0.30274em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel amsrm">≰</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></p>
+        <updated>2019-05-12T03:05:44.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>上篇讲述了Hexo的配置方法和一些常用指令，这篇继续说明如何把Hexo部署到网络上，设置Github和SSH秘钥。</p>
+</blockquote>
+<h2 id="设置github">设置Github</h2>
+<p>目前使用<code>hexo cl</code>、<code>hexo g</code>、<code>hexo s</code>这三条已经可以在本地测试、查看基础的hexo博客了，下面要做的是把博客部署到远端，这里使用免费的Github，如果有需要也可以自行购买域名。</p>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>上篇讲述了Hexo的配置方法和一些常用指令，这篇继续说明如何把Hexo部署到网络上，设置Github和SSH秘钥。</p>
+</blockquote>
+<h2 id="设置github">设置Github</h2>
+<p>目前使用<code>hexo cl</code>、<code>hexo g</code>、<code>hexo s</code>这三条已经可以在本地测试、查看基础的hexo博客了，下面要做的是把博客部署到远端，这里使用免费的Github，如果有需要也可以自行购买域名。</p>
+<!--more-->
+<p>打开<a href="https://github.com/">Github</a>，没有账户的赶紧注册一个吧。</p>
+<p>接下来新建一个项目，即点击<code>Start a project</code>，或在某处点击<code>New repository</code>创建仓库。</p>
+<p>起名时一定要注意，否则后期会出问题，格式为<code>用户名.github.io</code>，以<code>Purple</code>为例，则填入</p>
+<pre><code>Purple.github.io
+</code></pre>
+<h2 id="设置ssh秘钥">设置SSH秘钥</h2>
+<p>回到Git bash，下面生成SSH。最好可以先cd到blog目录，以防找不到。</p>
+<pre><code>git config --global user.name &quot;yourname&quot;
+git config --global user.email &quot;youremail&quot;
+</code></pre>
+<p>&quot;yourname&quot;处替换为用户名，&quot;youremail&quot;处替换为注册Github时所用邮箱。</p>
+<p>记得用下面的指令检查：</p>
+<pre><code>git config user.name
+git config user.email
+</code></pre>
+<p>确定无误之后输入创建SSH的指令，邮箱地址同理：</p>
+<pre><code>ssh-keygen -t rsa -C &quot;youremail&quot;
+</code></pre>
+<p>无脑回车，最后会告知已经生成了.ssh文件夹。</p>
+<blockquote>
+<p>ssh是一个密匙，<code>id_rsa</code>是这台电脑的私人秘钥，注意保密；<code>id_rsa.pub</code>是公共秘钥，需要和Github中的设置匹配，这样就可以通过git上传部署到github上，设置好SSH之后只需用<code>hexo d</code>即可提交。</p>
+</blockquote>
+<p>打开<code>id_rsa.pub</code>，复制其中的信息。</p>
+<p>在Github中找到<a href="https://github.com/settings/profile">Settings</a>，找到<a href="https://github.com/settings/keys"><code>SSH and GPG keys</code></a>一项并点击<code>New SSH key</code>，粘贴刚才复制的秘钥信息。</p>
+<p>记得回到Git bash中检查，输入：</p>
+<pre><code>ssh -T git@github.com	//然后输入yes
+</code></pre>
+<h2 id="部署hexo到github">部署Hexo到Github</h2>
+<p>至此Hexo已经和Github关联，接下来要做的是简单设置一下Hexo并提交(Git)。</p>
+<p>在此之前务必了解一下整个博客目录的<strong>结构</strong>：</p>
+<ul>
+<li>node_modules：依赖包</li>
+<li>public：存放生成的页面，文件由指令<code>hexo g</code>生成</li>
+<li>scaffolds：生成文章的一些模板</li>
+<li>source：存放源文件，包括你的文章</li>
+<li>themes：主题，默认landscape主题</li>
+<li><strong>_config.yml</strong>：博客的配置文件</li>
+<li><strong>themes/landscape/_config.yml</strong>：默认landscape主题的配置文件，用来存放页面的各种设置，其他主题同理</li>
+</ul>
+<p>一定要注意这里的两个<code>_config.yml</code>是<strong>不同的</strong>，在博客的配置文件中设置标题、描述、关键词、URL、分类&amp;标签、部署、<strong>主题</strong>等，而在主题的配置文件中设置页面的结构、样式、功能。</p>
+<p>修改主题的内容在下一篇说，而部署要用到根目录下的**_config.yml**。打开它，找到deploy，修改repo：</p>
+<pre><code>deploy:
+  type: git
+  repo: https://github.com/yourname/yourname.github.io.git
+  branch: master
+</code></pre>
+<p>同上，yourname替换为Github的用户名。</p>
+<p>想要通过<code>hexo deploy</code>来提交(git)得用到一个插件，cd到博客目录，命令行输入：</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre>
+<p>安装成功之后就可以使用上篇提到的指令了：</p>
+<pre><code>hexo cl		//清理public文件夹
+hexo d -g	//先生成再部署
+</code></pre>
+<blockquote>
+<p>第一次部署过程中会弹出一个界面，要输入账号密码。</p>
+</blockquote>
+<p>提示成功之后就可以在浏览器中查看博客啦~ 以<code>Purple-CSGO</code>为例，blog的地址即<code>https://purple-csgo.github.io/</code></p>
+<blockquote>
+<p>下篇说明更换yilia主题和编写提交博文的方法~</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[标题]]></title>
-        <id>https://eeudn8.coding-pages.com/biao-ti/</id>
-        <link href="https://eeudn8.coding-pages.com/biao-ti/">
+        <title type="html"><![CDATA[Hexo+yilia主题博客搭建配置(一)：简单配置Hexo和常用指令介绍]]></title>
+        <id>https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-yi-jian-dan-pei-zhi-hexo-he-chang-yong-zhi-ling-jie-shao/</id>
+        <link href="https://eeudn8.coding-pages.com/hexoyilia-zhu-ti-bo-ke-da-jian-pei-zhi-yi-jian-dan-pei-zhi-hexo-he-chang-yong-zhi-ling-jie-shao/">
         </link>
-        <updated>2020-02-07T04:07:01.000Z</updated>
-        <content type="html"><![CDATA[<p>开始</p>
-<h2 id="sfd">sfd</h2>
-<p>sdfs</p>
+        <updated>2019-05-12T02:53:44.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>花了将近一天半的时间使用同学推荐的Hexo框架搭建了Blog，使用的是yilia主题，下面我会分篇讲述一些细节和我踩过的坑。搭建过程部分参考了b站<a href="https://www.bilibili.com/video/av44544186">Codesheep的视频</a>。</p>
+</blockquote>
+<h2 id="hexo简介">Hexo简介</h2>
+<p>Hexo是一款基于Node.js的静态博客框架，依赖少，易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上。有不少人使用Hexo框架，其主题和解决问题的方案也更多，在遇坑时可以参照前人的解决方法。</p>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>花了将近一天半的时间使用同学推荐的Hexo框架搭建了Blog，使用的是yilia主题，下面我会分篇讲述一些细节和我踩过的坑。搭建过程部分参考了b站<a href="https://www.bilibili.com/video/av44544186">Codesheep的视频</a>。</p>
+</blockquote>
+<h2 id="hexo简介">Hexo简介</h2>
+<p>Hexo是一款基于Node.js的静态博客框架，依赖少，易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上。有不少人使用Hexo框架，其主题和解决问题的方案也更多，在遇坑时可以参照前人的解决方法。</p>
+<!-- more -->
+<p>笔者使用了<em>Codesheep</em>推荐的yilia主题，简洁美观，适配各种尺寸比例的终端并且集成了很多组件。在yilia的基础上使用了Gitalk评论系统，添加了归档，修改代码高亮出的背景色等等。<strong>所有的操作均在Windows环境下进行</strong>。</p>
+<h2 id="安装hexo及所需组件">安装Hexo及所需组件</h2>
+<ul>
+<li>
+<p>下载安装<a href="https://gitforwindows.org/">Git</a>。安装后得到Git Bash的命令行工具。可以在命令行中输入<code>git --version</code>来查看版本，检验是否成功安装。</p>
+</li>
+<li>
+<p>下载安装<a href="https://nodejs.org/en/download/">nodejs</a>。下载LTS版本即可。可在命令行中输入</p>
+</li>
+</ul>
+<pre><code>node -v
+npm -v
+</code></pre>
+<p>来查看版本，检验是否成功安装。</p>
+<ul>
+<li>安装Hexo组件。在Git Bash中输入：</li>
+</ul>
+<pre><code>npm install -g hexo-cli
+</code></pre>
+<p>记得使用<code>hexo -v</code>检验是否成功安装。</p>
+<ul>
+<li>确定博客安装位置，比如<code>E:/myblog</code>，则在Git Bash中输入：</li>
+</ul>
+<pre><code>cd e:/myblog
+</code></pre>
+<p>切换到选定的位置。然后初始化Hexo，输入：</p>
+<pre><code>npm install
+</code></pre>
+<h2 id="熟悉hexo及本地查看博客">熟悉Hexo及本地查看博客</h2>
+<p>至此Hexo已经在<code>E:/myblog</code>位置下安装完成，在部署到网络之前先<strong>熟悉一下Hexo的常用指令，在本地服务器查看Hexo页面</strong>。</p>
+<ul>
+<li>处理源文件，<strong>生成</strong>（generate）的文件放在如<code>E:/myblog/public</code>，该位置下的文件最终显示在网页中。</li>
+</ul>
+<pre><code>hexo generate //简写： hexo g
+</code></pre>
+<ul>
+<li><strong>打开本地服务器，快速测试hexo</strong>。开启后在浏览器中输入<code>localhost:4000</code>查看网页。在命令行中按下<code>Ctrl+C</code>关闭本地服务器。</li>
+</ul>
+<pre><code>hexo server //简写：hexo s
+</code></pre>
+<ul>
+<li><strong>清理</strong><code>public</code>目录下的文件。有的修改只通过<code>hexo g</code>无法完全修改这些文件，会出现bug。清理之后再<code>hexo g</code>和<code>hexo d</code>即可。</li>
+</ul>
+<pre><code>hexo clean //简写：hexo cl
+</code></pre>
+<ul>
+<li><strong>部署</strong>。把文件deploy到服务器上。暂时还不用输入这条指令，等到下篇文章会具体说明。</li>
+</ul>
+<pre><code>hexo deploy //简写：hexo d
+</code></pre>
+<hr>
+<p>今后会经常输入这些指令，可以使用简写和组合。如：</p>
+<pre><code>hexo cl &amp; hexo g &amp; hexo s
+</code></pre>
+<p>可以快速清理、生成并开启本地服务器，不过偶尔顺序会变成先<code>generate</code>再<code>clean</code>，需要注意一下。</p>
+<p>一般重复部署到远端服务器时可以这样：</p>
+<pre><code>hexo d -g
+</code></pre>
+<p>可以先生成再部署，后期需要<code>clean</code>的情况比较少，基本不会出问题。</p>
+<p>使用命令行时可以按↑快速切换到历史指令</p>
+<p>每次打开Git Bash都要cd到blog安装位置很麻烦，找到其快捷方式，<code>右键-属性-起始位置</code>改成blog的路径，每次打开就可以直接操作啦~</p>
 ]]></content>
     </entry>
 </feed>
